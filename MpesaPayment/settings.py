@@ -125,9 +125,17 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CONSUMER_KEY = 'eAnWBRl4qZlycD55rRnWf3ge8JJEPWqcjWZM3CcfPddM6twh'
-CONSUMER_SECRET = 'ZUkQJ6aUjIxpE6ndMAGzGfBbkUT9qHbhGqA2Knp51RJHd13oI5GWYvVlRpCercLD'
-SHORTCODE = '174379'
-LIPA_NA_MPESA_ONLINE_SHORTCODE = '174379'
-LIPA_NA_MPESA_ONLINE_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
+import environ
+
+# Initialize environment variables
+env = environ.Env()
+
+# Reading .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+CONSUMER_KEY = env('CONSUMER_KEY')
+CONSUMER_SECRET = env('CONSUMER_SECRET')
+SHORTCODE = env('SHORTCODE')
+LIPA_NA_MPESA_ONLINE_SHORTCODE = env('LIPA_NA_MPESA_ONLINE_SHORTCODE')
+LIPA_NA_MPESA_ONLINE_PASSKEY = env('LIPA_NA_MPESA_ONLINE_PASSKEY')
 

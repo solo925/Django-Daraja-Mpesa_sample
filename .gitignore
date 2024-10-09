@@ -1,0 +1,50 @@
+# Linux
+*~
+.directory
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Other
+*.sublime-workspace
+*.sublime-project
+.env
+.env.local
+.env.*.local
+*.exe
+*.dll
+*.so
+*.dylib
+.history/
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
